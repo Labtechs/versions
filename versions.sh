@@ -14,7 +14,7 @@ do ssh labtechs@mac$i /Users/Shared/.mac-scripts/versions.sh > /var/www/versions
 done
 
 ## Rooms ##
-Rooms=(rm301 rm323);
-for i in ${Rooms[@]}
-do ssh labtechs@rm$i /Users/Shared/.mac-scripts/versions.sh > /var/www/version/rm$i/`date +%h-%d-%y`
-done
+# Rooms=(rm301 rm323);
+# for i in ${Rooms[@]}
+# do ssh labtechs@rm$i /Users/Shared/.mac-scripts/versions.sh > /var/www/version/rm$i/`date +%h-%d-%y`
+# done
