@@ -14,7 +14,17 @@ do ssh labtechs@mac$i /Users/Shared/.mac-scripts/versions.sh > /var/www/versions
 done
 
 ## Rooms ##
-# Rooms=(rm301 rm323);
-# for i in ${Rooms[@]}
-# do ssh labtechs@rm$i /Users/Shared/.mac-scripts/versions.sh > /var/www/version/rm$i/`date +%h-%d-%y`
-# done
+# readlist='.list-classrooms.txt'
+# while read -r line
+# do
+#	name=$line
+#	echo $name
+# done < "$filename"
+Rooms=(202 301 302 305 306 307 309 311 313 402 409 410 411 412 413 501 503 504 505 507 509 510 511 512 513);
+for i in `seq 0 25`
+# Login as NYCDOE
+do
+	ROOM=`echo ${Rooms[$i]}`
+	echo $ROOM
+	ssh labtechs@rm$ROOM /Users/Shared/.mac-scripts/versions.sh > /var/www/version/$ROOM/`date +%h-%d-%y` 
+done
