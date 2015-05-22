@@ -26,5 +26,5 @@ for i in `seq 0 25`
 do
 	ROOM=`echo ${Rooms[$i]}`
 	echo $ROOM
-	ssh labtechs@rm$ROOM /Users/Shared/.mac-scripts/versions.sh > /var/www/version/$ROOM/`date +%h-%d-%y` 
+	ssh labtechs@rm$ROOM /Users/Shared/.mac-scripts/versions.sh > /var/www/versions/$ROOM/`date +%h-%d-%y` 
 done
